@@ -22,39 +22,54 @@ body {
 
 span i {
     position: absolute;
-    margin-left:40px;
+    color: transparent;
+    color: pink;
 }
 
 
 
 @keyframes alternanza1 {
     0% {
-        color:transparent;
-        transform: translatey(30px)
+        opacity: 0;
+    }
+    
+    2% {
+        opacity: 0;
+        transform: translatey(-30px);
+    }
+    
+    5% {
+        opacity: 1;
+        transform: translatey(0px);
+    }
+    
+    17% {
+        opacity: 1;
+        transform: translatey(0px);
     }
 
-    50% {
-        color:black;
+    20% {
+        opacity: 0;
+        transform: translatey(30px);
     }
 
     100% {
-        color:transparent;
-        transform:translatey(-30px);
+        opacity: 0;
     }
 }
 
 
-.parole i:nth-of-type(1) {
+i:nth-of-type(1) {
     display: inline-block;
-    animation: alternanza1 3s linear 1s infinite;
+    animation: alternanza1 6s linear infinite;
 }
 
-p i:nth-of-type(2) {
+i:nth-of-type(2) {
     display: inline-block;
-    animation: alternanza1 3s linear 2s infinite;
+    animation: alternanza1 6s linear infinite 2s;
 }
 
-p i:nth-of-type(3) {
+i:nth-of-type(3) {
     display: inline-block;
-    animation: alternanza1 3s linear 3s infinite;
+    animation: alternanza1 6s linear infinite 4s;
 }
